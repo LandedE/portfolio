@@ -1,0 +1,93 @@
+html{
+	font-family: Courier;
+	font-size: 18px;
+	color: #ffffff;
+	
+}
+
+#indexbody{
+	margin: 0px auto;
+}
+#portfoliohead{
+	width: 100vw;
+	height: 20vh;
+	background-color: black;
+	
+}
+
+#menu{
+	text-align: right;
+	margin-right: 10vw;
+
+}
+
+ a{
+	color: white;
+	text-decoration: none;
+	text-align: right;
+	
+}
+
+#portfoliohead li{
+	display: inline-block;
+	text-align: right;
+	
+}
+
+#indexbody #titleindex{
+	position: relative;
+	bottom: 30px;
+	font-size: 25px;
+}
+
+#evanlan{
+	text-align: center;
+	position: relative;
+	bottom: 50%;
+	font-size: 5vh;
+	margin-bottom: 2vh;
+}
+
+#pianokeys{
+	height: 500px;
+	width: 1000px;
+	margin: 0px auto;
+}
+
+#body{
+	height: 1000px;
+	width: 1000px;
+	margin: 0px auto;
+	
+	background-size: 1000px 1000px;
+	background-repeat: no-repeat;
+	background-position: relative;
+	left: 140px;
+	top: 100px;
+
+	
+}
+
+#body *{
+	display: inline-block;
+}
+
+#employers{
+	width: 300px;
+}
+#body li{
+	display:block;
+	margin:20px;
+	position: relative;
+	top: 200px;
+	background-color: black;
+	left: 87px;
+	
+	
+}
+
+#pastemp{
+	position:relative;
+	left: 385px;
+	bottom: 150px;
+}
