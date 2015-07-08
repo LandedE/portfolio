@@ -1,34 +1,223 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    ;
-<title>Index</title>
-<link rel="stylesheet" href="portstyles.css">
-</head>
-<body id="indexbody">
-	<header id="portfoliohead">
-	<ul id="menu">
-		<li class="navigation"><a href="about.html">About</a></li>
-		<li class="navigation"><a href="contact.html">Contact</a></li>
-		<li class="navigation"><a href="skills.html">Skills</a></li>
-	</ul>
-	<h1 id="titleindex">Index</h1>
-	<h1 id="evanlan">Evan Lanning</h1>
 
-	</header>
-	<div id="body">
-	
-	<h2 id="pastemp">Past Employers</h2>
-		<div id="employers">
-		<ul>
-			<li><a href="https://plus.google.com/100187928582143768067/about?gl=us&hl=en">Uncle Howie's Pizza</a></li>
-			<li><a href="http://splashkingdom.net/">Splash Kingdom</a></li>
-			<li><a href="http://www.csulb.edu/explore/49er-shops-beach">49er's Shops</a></li>
-			<li><a href="http://www.collegeworks.com/">College Works Painting</a></li>
-			<li><a href="https://www.facebook.com/SattonMarketing">Satton Marketing</a></li>
-			<li><a href="http://www.repairsworld.com/">The Tech Center</a></li>
-		</ul>
-		</div>
+<head>
+    <title>Index</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='portstyles.css'>
+
+
+<script>
+var click_count7 = 0;
+var click_count5 = 0;
+$(document).ready(function(){
+    $('#e_symbol').click(function(){
+        $('#staff_paper').removeClass('hidden')
+        $('#staff_paper').addClass('shown');
+    });
+
+    $('#black_key5').click(function(){
+        console.log('clicked');
+            replaceKeys4_5();
+            replaceKeys5_6();
+            animateKeys7_10();
+            
+    });
+
+
+    $('#black_key4').click(function(){
+            replaceKeys7_10(); 
+            animateKeys5_6();
+            replaceKeys4_5();
+
+    })
+
+    $('#black_key3').click(function(){
+            replaceKeys7_10(); 
+            replaceKeys5_6();
+            animateKeys4_5();
+
+    })
+
+    $('#black_key2').click(function(){
+            replaceKeys7_10(); 
+            replaceKeys5_6();
+            replaceKeys4_5();
+
+    })
+
+
+function animateKeys4_5(){
+            var current_white = '.wkey'+4;
+            var current_white_trans = 'wkey'+4+'_transform';
+            $(current_white).removeClass('keys_static');
+            $(current_white).addClass('keys_moving '+current_white_trans);
+            $('#black_key3').addClass('bl_3_transform');
+            setTimeout(function(){
+                        var mail = $('<a>',{
+                                    href: 'mailto:ewlanning@gmail.com',
+                                    text:'Send Me An Email',
+                                    class: 'mail',
+
+                        });
+                        var span = $('<span>',{
+                                    text:'ewlanning@gmail.com',
+                                    class: 'email_span',
+                        })
+                        $('#templ_head').append(mail, span);
+
+            }, 1300);
+           
+}
+
+
+               
+                       
+
+
+function replaceKeys4_5(){
+            var current_white = '.wkey'+4;
+            var current_white_trans = 'wkey'+4+'_transform';
+            $(current_white).addClass('keys_static');
+            $(current_white).removeClass('keys_moving '+current_white_trans);
+            $('#black_key3').removeClass('bl_3_transform');
+            $('.mail').remove();
+            $('.email_span').remove();
+
+}
+
+
+
+ function animateKeys5_6(){    
+        for(var i=5; i<=6;i++){
+            var current_white = '.wkey'+i;
+            var current_white_trans = 'wkey'+i+'_transform';
+            $('.skills').removeClass('skills_image_hidden');
+            $(current_white).removeClass('keys_static');
+            $(current_white).addClass('keys_moving '+current_white_trans);
+            $('#black_key4').addClass('bl_4_transform');
+        }   
+    };
+
+function replaceKeys5_6(){    
+    for(var i=5; i<=6;i++){
+        var current_white = '.wkey'+i;
+        var current_white_trans = 'wkey'+i+'_transform';
+        $('.skills').addClass('skills_image_hidden');
+        $(current_white).addClass('keys_static');
+        $(current_white).removeClass('keys_moving '+current_white_trans);
+        $('#black_key4').removeClass('bl_4_transform');
+    }   
+};
+
+function animateKeys7_10(){    
+            for(var i=7; i<=10;i++){
+                var current_white = '.wkey'+i;
+                var current_white_trans = 'wkey'+i+'_transform';
+                $(current_white).removeClass('keys_static');
+                $(current_white).addClass('keys_moving '+current_white_trans);
+
+            };
+            $('#black_key5').addClass('bl_5_transform');
+            click_count5+=1;
+        };
+
+function replaceKeys7_10(){
+            for(var i=7; i<=10;i++){
+                var current_white = '.wkey'+i;
+                var current_white_trans = 'wkey'+i+'_transform';
+                $(current_white).addClass('keys_static');
+                $(current_white).removeClass('keys_moving '+current_white_trans);
+
+            };
+            $('#black_key5').removeClass('bl_5_transform');
+            click_count5+=1;
+        };
+});
+
+</script>
+
+
+
+
+
+
+</head>
+
+<body class='col-xs-12'>
+
+    <div id='left' class='col-xs-2'>
+        <nav id="navigation_menu">
+            <div id='black_key1' class='black-keys'>
+            </div>
+            <div id='black_key2' class='black-keys'>
+                <a id='home' class='col-xs-12' target='home.html'>Home</a>
+            </div>
+            <div id='black_key3' class='black-keys'>
+                <a id='contact' class='col-xs-12' target='contact.html'>Contact</a>
+            </div>
+            <div id='black_key4' class='black-keys'>
+                <a id='skills' class='col-xs-12' target='skills.html'>Skills</a>
+            </div>
+            <div id='black_key5' class='black-keys'>
+                <a id='projects' class='col-xs-12' target='projects.html'>Projects</a>
+            </div>
+            <div id='black_key6' class='black-keys'>
+            </div>
+        </nav>
+        <div class='col-xs-12 keys_static wkey1'>
+        </div>
+        <div class='col-xs-12 keys_static wkey2'>
+        </div>
+        <div class='col-xs-12 keys_static wkey3'>
+        </div>
+        <div class='col-xs-12 keys_static wkey4'>
+           
+
+        </div>
+        <div class='col-xs-12 keys_static wkey5'>
+         <img id='html' class="skills skills_image_hidden" src='HTML5.png'>
+         <img class='js skills skills_image_hidden' src='javascript-logo.png'>
+         <img class='css skills skills_image_hidden'src='css3logo.png'>        
+         <img class='bs skills skills_image_hidden' src='bs.png'>
+         <img class='jq skills skills_image_hidden' src='jquery.png'>
+
+
+        </div>
+        <div class='col-xs-12 keys_static wkey6'>
+            <img class='php skills skills_image_hidden' src='phplogo.png'>
+            <img class='mysql skills skills_image_hidden' src='MySQL.png'>
+            <img class='api skills skills_image_hidden' src='api-logo.png'>
+        </div>
+        <div class='col-xs-12 keys_static wkey7'>
+        </div>
+        <div class='col-xs-12 keys_static wkey8'>
+        </div>
+        <div class='col-xs-12 keys_static wkey9'>
+        </div>
+        <div class='col-xs-12 keys_static wkey10'>
+            
+        </div>
+    </div>
+    <header id='templ_head' class='col-xs-8 col-xs-offset-1'>
+        <div id="e_symbol" class='col-xs-1'>
+        <!-- <h1 id='e_text' class='col-xs-6 col-xs-offset-2'> -->E<!-- </h1> -->
+        
+        </div>
+        <h2 class='col-xs-4 col-xs-offset-2 my_name'>Evan Lanning</h2>
+        <p class='col-xs-2 col-xs-offset-3 job_description'>Product Developer</p>
+        
+        
+    </header>
+    
+    
+    <div id='center' class='col-xs-8 col-xs-offset-1'>
+        
+    </div>
+    <div id='keys_cover'>
+    </div>
 </body>
+
 </html>
