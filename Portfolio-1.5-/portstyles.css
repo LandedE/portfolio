@@ -341,5 +341,36 @@ html {
   right: 48vh;
 }
 
+.final_project_link{
+  height: 39vh;
+  position: absolute;
+  top: 17vh;
+  left: 31.5vw;
+  width: 20.4vw;
+}
+
+.project_1_link{
+  height: 39vh;
+  position: absolute;
+  top: 17vh;
+  left: 58.5vw;
+  width: 20.4vw;
+
+}
+
+.project_2_link{
+   height: 39vh;
+  position: absolute;
+  top: 59vh;
+  left: 31.5vw;
+  width: 20.4vw;	
+}
+.project_3_link{
+  height: 39vh;
+  position: absolute;
+  top: 59vh;
+  left: 58.5vw;
+  width: 20.4vw;
+}
 
 

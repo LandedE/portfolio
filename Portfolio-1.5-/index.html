@@ -122,6 +122,54 @@ function animateKeys7_10(){
             };
             $('#black_key5').addClass('bl_5_transform');
             click_count5+=1;
+
+            setTimeout(function(){
+                        var final_project_link = $('<a>',{
+                                    href: 'c4_final_project/index.php',
+                                    class: 'link_to_final_project',
+                            });
+                        var final_project_image = $('<img>',{
+                                    src:'snowy_mountain.jpg',
+                                    class: 'final_project_link',
+                            });
+
+                        var project_1_link = $('<a>',{
+                                    href: 'link_to_project',
+                                    class: 'link_to_1_project',
+                            });
+                        var image1 = $('<img>',{
+                                    src:'snowy_mountain.jpg',
+                                    class: 'project_1_link',
+                            });
+
+                        var project_2_link = $('<a>',{
+                                    href: 'c4_final_project/index.php',
+                                    class: 'link_to_2_project',
+                            });
+                        var image2 = $('<img>',{
+                                    src:'snowy_mountain.jpg',
+                                    class: 'project_2_link',
+                            });
+
+                        var project_3_link = $('<a>',{
+                                    href: 'c4_final_project/index.php',
+                                    class: 'link_to_3_project',
+                            });
+                        var image3 = $('<img>',{
+                                    src:'snowy_mountain.jpg',
+                                    class: 'project_3_link',
+                            });
+
+                        final_project_link.append(final_project_image);
+                        project_1_link.append(image1);
+                        project_2_link.append(image2);
+                        project_3_link.append(image3);
+
+
+                        $('body').append(final_project_link,project_1_link,project_2_link,project_3_link);
+
+            }, 1300);
+           
         };
 
 function replaceKeys7_10(){
@@ -133,8 +181,14 @@ function replaceKeys7_10(){
 
             };
             $('#black_key5').removeClass('bl_5_transform');
-            click_count5+=1;
+            click_count5+=1; 
+            $('.link_to_final_project').remove();
+            $('.link_to_1_project').remove();
+            $('.link_to_2_project').remove();
+            $('.link_to_3_project').remove();
+
         };
+       
 });
 
 </script>
@@ -147,6 +201,11 @@ function replaceKeys7_10(){
 </head>
 
 <body class='col-xs-12'>
+
+    <!--     -->
+
+
+
 
     <div id='left' class='col-xs-2'>
         <nav id="navigation_menu">
@@ -202,7 +261,7 @@ function replaceKeys7_10(){
         </div>
     </div>
     <header id='templ_head' class='col-xs-8 col-xs-offset-1'>
-        <a href='c4_final_project/index.php'>Final Project</a>
+        
         <div id="e_symbol" class='col-xs-1'>
 
         <!-- <h1 id='e_text' class='col-xs-6 col-xs-offset-2'> -->E<!-- </h1> -->
