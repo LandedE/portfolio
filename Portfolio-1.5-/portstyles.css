@@ -341,36 +341,52 @@ html {
   right: 48vh;
 }
 
-.final_project_link{
-  height: 39vh;
-  position: absolute;
-  top: 17vh;
-  left: 31.5vw;
-  width: 20.4vw;
-}
-
 .project_1_link{
-  height: 39vh;
+    height: 38vh;
   position: absolute;
   top: 17vh;
-  left: 58.5vw;
+  left: 31.8vw;
   width: 20.4vw;
-
+  border-radius: 5px;
 }
 
 .project_2_link{
-   height: 39vh;
+  height: 38vh;
   position: absolute;
-  top: 59vh;
-  left: 31.5vw;
-  width: 20.4vw;	
-}
-.project_3_link{
-  height: 39vh;
-  position: absolute;
-  top: 59vh;
-  left: 58.5vw;
+  top: 17vh;
+  left: 58.8vw;
   width: 20.4vw;
+  border-radius: 5px;
+
+}
+
+.project_3_link{
+  height: 38vh;
+  position: absolute;
+  top: 59vh;
+  left: 31.8vw;
+  width: 20.4vw;
+  border-radius: 5px;	
+}
+.project_4_link{
+  height: 38vh;
+  position: absolute;
+  top: 59vh;
+  left: 58.8vw;
+  width: 20.4vw;
+  border-radius: 5px;
+}
+
+.description_text{
+  background-color: black;
+  opacity: 0.7;
+  color: white;
+  font-size: 1.5vh;
+
+}
+
+.description_text_hidden{
+	display:none;
 }
 
 

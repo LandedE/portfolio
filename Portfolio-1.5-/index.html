@@ -124,52 +124,107 @@ function animateKeys7_10(){
             click_count5+=1;
 
             setTimeout(function(){
-                        var final_project_link = $('<a>',{
-                                    href: 'c4_final_project/index.php',
-                                    class: 'link_to_final_project',
-                            });
-                        var final_project_image = $('<img>',{
-                                    src:'snowy_mountain.jpg',
-                                    class: 'final_project_link',
-                            });
-
                         var project_1_link = $('<a>',{
-                                    href: 'link_to_project',
+                                    href: 'c4_final_project/index.php',
                                     class: 'link_to_1_project',
                             });
                         var image1 = $('<img>',{
-                                    src:'snowy_mountain.jpg',
-                                    class: 'project_1_link',
+                                    src:'final_project-pic.png',
+                                    class: 'project_1_link project_window',
+                                    index_id: 1,
                             });
+                        var project_1_description = $('<div>',{
+                                    class: 'project_1_link description_text description_text_hidden description1',
+                                    index_id: 1,
+                                    text: 'Roam is an application used to generate a random plan for you and your friends based on certain parameters. It is my final project and it utilizes the culmination of knowledge I acquired during my time at LearningFuze.'
+
+
+
+
+                        });
+
+                        
 
                         var project_2_link = $('<a>',{
-                                    href: 'c4_final_project/index.php',
+                                    href: 'link_to_project',
                                     class: 'link_to_2_project',
                             });
                         var image2 = $('<img>',{
-                                    src:'snowy_mountain.jpg',
-                                    class: 'project_2_link',
+                                    src:'SGT-pic.png',
+                                    class: 'project_2_link project_window',
+                                    index_id: 2,
                             });
+                        var project_2_description = $('<div>',{
+                                    class: 'project_2_link description_text description_text_hidden description2',
+                                    index_id: 2,
+                                    text: 'Roam is an application used to generate a random plan for you and your friends based on certain parameters. It is my final project and it utilizes the culmination of knowledge I acquired during my time at LearningFuze.'
+
+                        });
+
+                        
+
 
                         var project_3_link = $('<a>',{
                                     href: 'c4_final_project/index.php',
                                     class: 'link_to_3_project',
                             });
                         var image3 = $('<img>',{
-                                    src:'snowy_mountain.jpg',
-                                    class: 'project_3_link',
+                                    src:'calculator-pic.png',
+                                    class: 'project_3_link project_window',
+                                    index_id: 3,
+                            });
+                         var project_3_description = $('<div>',{
+                                    class: 'project_3_link description_text description_text_hidden description3',
+                                    index_id: 3,
+                                    text: 'Roam is an application used to generate a random plan for you and your friends based on certain parameters. It is my final project and it utilizes the culmination of knowledge I acquired during my time at LearningFuze.'
+
+                        });
+                        
+
+
+                        var project_4_link = $('<a>',{
+                                    href: 'c4_final_project/index.php',
+                                    class: 'link_to_4_project',
+                            });
+                        var image4 = $('<img>',{
+                                    src:'sweet-corner-pic.png',
+                                    class: 'project_4_link project_window',
+                                    index_id: 4,
                             });
 
-                        final_project_link.append(final_project_image);
-                        project_1_link.append(image1);
-                        project_2_link.append(image2);
-                        project_3_link.append(image3);
+                        var project_4_description = $('<div>',{
+                                    class: 'project_4_link description_text description_text_hidden description4',
+                                    index_id: 4,
+                                    text: 'Roam is an application used to generate a random plan for you and your friends based on certain parameters. It is my final project and it utilizes the culmination of knowledge I acquired during my time at LearningFuze.'
+
+                        });
+
+                        project_1_link.append(image1, project_1_description);
+                        project_2_link.append(image2, project_2_description);
+                        project_3_link.append(image3, project_3_description);
+                        project_4_link.append(image4, project_4_description);
 
 
-                        $('body').append(final_project_link,project_1_link,project_2_link,project_3_link);
+                        $('body').append(project_1_link,project_2_link,project_3_link, project_4_link);
+                        $('.project_window').mouseover(function(){
+                                        console.log(this);
+                                        var index = $(this).attr('index_id');
+                                        var description_to_show = '.description'+ index;
+                                        console.log(description_to_show);
+                                        $(description_to_show).toggleClass('description_text_hidden');
+                                        // $(this).toggleClass('description_text_hidden');
+                        });
+                        $('.description_text').mouseleave(function(){
+                                        console.log(this);
+                                        var index = $(this).attr('index_id');
+                                        var description_to_show = '.description'+ index;
+                                        console.log(description_to_show);
+                                        $(description_to_show).toggleClass('description_text_hidden');
+                                        // $(this).toggleClass('description_text_hidden');
+                        });
+                    }, 1300);
+                       
 
-            }, 1300);
-           
         };
 
 function replaceKeys7_10(){
@@ -182,10 +237,10 @@ function replaceKeys7_10(){
             };
             $('#black_key5').removeClass('bl_5_transform');
             click_count5+=1; 
-            $('.link_to_final_project').remove();
             $('.link_to_1_project').remove();
             $('.link_to_2_project').remove();
             $('.link_to_3_project').remove();
+            $('.link_to_4_project').remove();
 
         };
        
