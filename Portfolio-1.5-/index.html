@@ -10,6 +10,36 @@
 
 
 <script>
+
+$(document).ready(function(){
+    createHomeText();
+});
+
+
+function createHomeText(){
+
+    var about_me_div = $('<div>',{
+                        id: 'about_me',
+                        class: 'col-sm-6 col-sm-offset-3'
+    });
+
+    var welcome = $('<h4>',{
+                    class: 'col-sm-2 col-sm-offset-5 welcome_text',
+                    text: 'Welcome!',
+    });
+      
+    var main_text = $('<p>',{
+                    class: 'col-sm-6 col-sm-offset-3', 
+                    text: ' My name is Evan Lanning. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus diam eros, vel vehicula urna imperdiet sit amet. Etiam commodo libero sit amet consequat sagittis. Donec ullamcorper varius luctus. Sed quis varius lacus, at tristique turpis. Suspendisse potenti. Quisque placerat risus id arcu mollis auctor. Etiam interdum, turpis et pretium sollicitudin, ex elit accumsan mi, nec pharetra lectus augue sit amet arcu. Maecenas aliquet facilisis ipsum, sed bibendum lacus volutpat vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam ac tristique sem. Nam egestas pretium dictum. Etiam ornare est egestas sapien vulputate efficitur. Nulla facilisis mi ut scelerisque dictum. Nam sit amet sapien massa.'
+    });
+
+    about_me_div.append(welcome, main_text);
+    $('body').append(about_me_div);
+   
+}
+
+
+
 var click_count7 = 0;
 var click_count5 = 0;
 $(document).ready(function(){
@@ -23,6 +53,7 @@ $(document).ready(function(){
             replaceKeys4_5();
             replaceKeys5_6();
             animateKeys7_10();
+            $('#about_me').remove();
             
     });
 
@@ -31,6 +62,7 @@ $(document).ready(function(){
             replaceKeys7_10(); 
             animateKeys5_6();
             replaceKeys4_5();
+            $('#about_me').remove();
 
     })
 
@@ -38,6 +70,7 @@ $(document).ready(function(){
             replaceKeys7_10(); 
             replaceKeys5_6();
             animateKeys4_5();
+            $('#about_me').remove();
 
     })
 
@@ -45,6 +78,8 @@ $(document).ready(function(){
             replaceKeys7_10(); 
             replaceKeys5_6();
             replaceKeys4_5();
+            $('#about_me').remove();
+            createHomeText();
 
     })
 
@@ -55,18 +90,25 @@ function animateKeys4_5(){
             $(current_white).removeClass('keys_static');
             $(current_white).addClass('keys_moving '+current_white_trans);
             $('#black_key3').addClass('bl_3_transform');
+            var email_1 = "ewlanning";
+            var email_2 = "@gmail.com";
             setTimeout(function(){
                         var mail = $('<a>',{
-                                    href: 'mailto:ewlanning@gmail.com',
                                     text:'Send Me An Email',
                                     class: 'mail',
 
+                        }).click(function(){
+                            window.location = "mailto:"+email_1+email_2;
                         });
-                        var span = $('<span>',{
-                                    text:'ewlanning@gmail.com',
+                        var span1 = $('<span>',{
+                                    text:email_1,
                                     class: 'email_span',
-                        })
-                        $('#templ_head').append(mail, span);
+                        });
+                        var span2 = $('<span>',{
+                                    text:email_2,
+                                    class: 'email_span',
+                        });
+                        $('#templ_head').append(mail, span1, span2);
 
             }, 1300);
            
@@ -157,7 +199,7 @@ function animateKeys7_10(){
                         var project_2_description = $('<div>',{
                                     class: 'project_2_link description_text description_text_hidden description2',
                                     index_id: 2,
-                                    text: 'Roam is an application used to generate a random plan for you and your friends based on certain parameters. It is my final project and it utilizes the culmination of knowledge I acquired during my time at LearningFuze.'
+                                    text: 'The Student Grade Table is an application that displays information about mock students in list form. It communicates with a server to fetch information from a database holding the information about the students. It allows the user to create or delete students, and includes sorting functionality. This project helped me to learn about fetching data through asynchronous communication and how to display that fetched data.'
 
                         });
 
@@ -176,7 +218,7 @@ function animateKeys7_10(){
                          var project_3_description = $('<div>',{
                                     class: 'project_3_link description_text description_text_hidden description3',
                                     index_id: 3,
-                                    text: 'Roam is an application used to generate a random plan for you and your friends based on certain parameters. It is my final project and it utilizes the culmination of knowledge I acquired during my time at LearningFuze.'
+                                    text: 'This project is a straightforward calculator. It was one of the first projects I completed. It includes order of operation functionality and supports sequential operations. It was a great lesson in how a simple application must be thought of programatically.'
 
                         });
                         
@@ -195,7 +237,7 @@ function animateKeys7_10(){
                         var project_4_description = $('<div>',{
                                     class: 'project_4_link description_text description_text_hidden description4',
                                     index_id: 4,
-                                    text: 'Roam is an application used to generate a random plan for you and your friends based on certain parameters. It is my final project and it utilizes the culmination of knowledge I acquired during my time at LearningFuze.'
+                                    text: 'Sweet Corner is a simple website project built in a mobile-first style. The pages are styled with Bootstrap and the navigation is done with PHP.'
 
                         });
 
@@ -257,7 +299,6 @@ function replaceKeys7_10(){
 
 <body class='col-xs-12'>
 
-    <!--     -->
 
 
 
