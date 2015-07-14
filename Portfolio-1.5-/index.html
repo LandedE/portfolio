@@ -10,6 +10,36 @@
 
 
 <script>
+
+$(document).ready(function(){
+    createHomeText();
+});
+
+
+function createHomeText(){
+
+    var about_me_div = $('<div>',{
+                        id: 'about_me',
+                        class: 'col-sm-6 col-sm-offset-3'
+    });
+
+    var welcome = $('<h4>',{
+                    class: 'col-sm-2 col-sm-offset-5 welcome_text',
+                    text: 'Welcome!',
+    });
+      
+    var main_text = $('<p>',{
+                    class: 'col-sm-6 col-sm-offset-3', 
+                    text: ' My name is Evan Lanning. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus diam eros, vel vehicula urna imperdiet sit amet. Etiam commodo libero sit amet consequat sagittis. Donec ullamcorper varius luctus. Sed quis varius lacus, at tristique turpis. Suspendisse potenti. Quisque placerat risus id arcu mollis auctor. Etiam interdum, turpis et pretium sollicitudin, ex elit accumsan mi, nec pharetra lectus augue sit amet arcu. Maecenas aliquet facilisis ipsum, sed bibendum lacus volutpat vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam ac tristique sem. Nam egestas pretium dictum. Etiam ornare est egestas sapien vulputate efficitur. Nulla facilisis mi ut scelerisque dictum. Nam sit amet sapien massa.'
+    });
+
+    about_me_div.append(welcome, main_text);
+    $('body').append(about_me_div);
+   
+}
+
+
+
 var click_count7 = 0;
 var click_count5 = 0;
 $(document).ready(function(){
@@ -23,6 +53,7 @@ $(document).ready(function(){
             replaceKeys4_5();
             replaceKeys5_6();
             animateKeys7_10();
+            $('#about_me').remove();
             
     });
 
@@ -31,6 +62,7 @@ $(document).ready(function(){
             replaceKeys7_10(); 
             animateKeys5_6();
             replaceKeys4_5();
+            $('#about_me').remove();
 
     })
 
@@ -38,6 +70,7 @@ $(document).ready(function(){
             replaceKeys7_10(); 
             replaceKeys5_6();
             animateKeys4_5();
+            $('#about_me').remove();
 
     })
 
@@ -45,6 +78,8 @@ $(document).ready(function(){
             replaceKeys7_10(); 
             replaceKeys5_6();
             replaceKeys4_5();
+            $('#about_me').remove();
+            createHomeText();
 
     })
 
@@ -55,18 +90,25 @@ function animateKeys4_5(){
             $(current_white).removeClass('keys_static');
             $(current_white).addClass('keys_moving '+current_white_trans);
             $('#black_key3').addClass('bl_3_transform');
+            var email_1 = "ewlanning";
+            var email_2 = "@gmail.com";
             setTimeout(function(){
                         var mail = $('<a>',{
-                                    href: 'mailto:ewlanning@gmail.com',
                                     text:'Send Me An Email',
                                     class: 'mail',
 
+                        }).click(function(){
+                            window.location = "mailto:"+email_1+email_2;
                         });
-                        var span = $('<span>',{
-                                    text:'ewlanning@gmail.com',
+                        var span1 = $('<span>',{
+                                    text:email_1,
                                     class: 'email_span',
-                        })
-                        $('#templ_head').append(mail, span);
+                        });
+                        var span2 = $('<span>',{
+                                    text:email_2,
+                                    class: 'email_span',
+                        });
+                        $('#templ_head').append(mail, span1, span2);
 
             }, 1300);
            
@@ -122,6 +164,109 @@ function animateKeys7_10(){
             };
             $('#black_key5').addClass('bl_5_transform');
             click_count5+=1;
+
+            setTimeout(function(){
+                        var project_1_link = $('<a>',{
+                                    href: 'c4_final_project/index.php',
+                                    class: 'link_to_1_project',
+                            });
+                        var image1 = $('<img>',{
+                                    src:'final_project-pic.png',
+                                    class: 'project_1_link project_window',
+                                    index_id: 1,
+                            });
+                        var project_1_description = $('<div>',{
+                                    class: 'project_1_link description_text description_text_hidden description1',
+                                    index_id: 1,
+                                    text: 'Roam is an application used to generate a random plan for you and your friends based on certain parameters. It is my final project and it utilizes the culmination of knowledge I acquired during my time at LearningFuze.'
+
+
+
+
+                        });
+
+                        
+
+                        var project_2_link = $('<a>',{
+                                    href: 'link_to_project',
+                                    class: 'link_to_2_project',
+                            });
+                        var image2 = $('<img>',{
+                                    src:'SGT-pic.png',
+                                    class: 'project_2_link project_window',
+                                    index_id: 2,
+                            });
+                        var project_2_description = $('<div>',{
+                                    class: 'project_2_link description_text description_text_hidden description2',
+                                    index_id: 2,
+                                    text: 'The Student Grade Table is an application that displays information about mock students in list form. It communicates with a server to fetch information from a database holding the information about the students. It allows the user to create or delete students, and includes sorting functionality. This project helped me to learn about fetching data through asynchronous communication and how to display that fetched data.'
+
+                        });
+
+                        
+
+
+                        var project_3_link = $('<a>',{
+                                    href: 'c4_final_project/index.php',
+                                    class: 'link_to_3_project',
+                            });
+                        var image3 = $('<img>',{
+                                    src:'calculator-pic.png',
+                                    class: 'project_3_link project_window',
+                                    index_id: 3,
+                            });
+                         var project_3_description = $('<div>',{
+                                    class: 'project_3_link description_text description_text_hidden description3',
+                                    index_id: 3,
+                                    text: 'This project is a straightforward calculator. It was one of the first projects I completed. It includes order of operation functionality and supports sequential operations. It was a great lesson in how a simple application must be thought of programatically.'
+
+                        });
+                        
+
+
+                        var project_4_link = $('<a>',{
+                                    href: 'c4_final_project/index.php',
+                                    class: 'link_to_4_project',
+                            });
+                        var image4 = $('<img>',{
+                                    src:'sweet-corner-pic.png',
+                                    class: 'project_4_link project_window',
+                                    index_id: 4,
+                            });
+
+                        var project_4_description = $('<div>',{
+                                    class: 'project_4_link description_text description_text_hidden description4',
+                                    index_id: 4,
+                                    text: 'Sweet Corner is a simple website project built in a mobile-first style. The pages are styled with Bootstrap and the navigation is done with PHP.'
+
+                        });
+
+                        project_1_link.append(image1, project_1_description);
+                        project_2_link.append(image2, project_2_description);
+                        project_3_link.append(image3, project_3_description);
+                        project_4_link.append(image4, project_4_description);
+
+
+                        $('body').append(project_1_link,project_2_link,project_3_link, project_4_link);
+                        $('.project_window').mouseover(function(){
+                                        console.log(this);
+                                        var index = $(this).attr('index_id');
+                                        var description_to_show = '.description'+ index;
+                                        console.log(description_to_show);
+                                        $(description_to_show).toggleClass('description_text_hidden');
+                                        // $(this).toggleClass('description_text_hidden');
+                        });
+                        $('.description_text').mouseleave(function(){
+                                        console.log(this);
+                                        var index = $(this).attr('index_id');
+                                        var description_to_show = '.description'+ index;
+                                        console.log(description_to_show);
+                                        $(description_to_show).toggleClass('description_text_hidden');
+                                        // $(this).toggleClass('description_text_hidden');
+                        });
+                    }, 1300);
+                       
+
         };
 
 function replaceKeys7_10(){
@@ -133,8 +278,14 @@ function replaceKeys7_10(){
 
             };
             $('#black_key5').removeClass('bl_5_transform');
-            click_count5+=1;
+            click_count5+=1; 
+            $('.link_to_1_project').remove();
+            $('.link_to_2_project').remove();
+            $('.link_to_3_project').remove();
+            $('.link_to_4_project').remove();
+
         };
+       
 });
 
 </script>
@@ -147,6 +298,10 @@ function replaceKeys7_10(){
 </head>
 
 <body class='col-xs-12'>
+
+
+
+
 
     <div id='left' class='col-xs-2'>
         <nav id="navigation_menu">
@@ -202,7 +357,7 @@ function replaceKeys7_10(){
         </div>
     </div>
     <header id='templ_head' class='col-xs-8 col-xs-offset-1'>
-        <a href='c4_final_project/index.php'>Final Project</a>
+        
         <div id="e_symbol" class='col-xs-1'>
 
         <!-- <h1 id='e_text' class='col-xs-6 col-xs-offset-2'> -->E<!-- </h1> -->
